@@ -62,10 +62,8 @@
   font-size: 23px;
   cursor: pointer;
   display: none;
-  
-  
 }
-.menu-btn .btn{
+.menu-btn .btn {
   background-color: crimson;
   border-radius: 50px;
 }
@@ -115,16 +113,11 @@
   color: crimson;
   background: none;
 }
-
-/*about section styling*/
-
+/* all similiar content styling code */
 section {
   padding: 100px 0;
 }
-.about {
-  font-family: "Poppins", sans-serif;
-}
-.about .title {
+section .title {
   position: relative;
   text-align: center;
   font-size: 40px;
@@ -133,7 +126,7 @@ section {
   padding: 20px;
   font-family: "Ubuntu", sans-serif;
 }
-.about .title::before {
+section .title::before {
   content: "";
   position: absolute;
   bottom: 0px;
@@ -143,8 +136,7 @@ section {
   background: black;
   transform: translateX(-50%);
 }
-.about .title::after {
-  content: "who i am";
+section .title::after {
   position: absolute;
   bottom: -12px;
   left: 50%;
@@ -154,13 +146,24 @@ section {
   background: white;
   transform: translateX(-50%);
 }
-.about .about-content{
+
+/*about section styling*/
+
+.about,
+.services {
+  font-family: "Poppins", sans-serif;
+}
+.about .title::after {
+  content: "who i am";
+}
+.about .about-content,
+.services .serv-content {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
 }
-.about .about-content .left{
+.about .about-content .left {
   width: 45%;
 }
 .about .about-content .left img {
@@ -169,21 +172,21 @@ section {
   object-fit: cover;
   border-radius: 50px;
 }
-.about .about-content .right{
+.about .about-content .right {
   width: 55%;
 }
-.about .about-content .right .text{
+.about .about-content .right .text {
   font-size: 25px;
   font-weight: 600;
   margin-bottom: 10px;
 }
-.about .about-content .right .text span{
+.about .about-content .right .text span {
   color: crimson;
 }
-.about .about-content .right p{
+.about .about-content .right p {
   text-align: justify;
 }
-.about .about-content .right a{
+.about .about-content .right a {
   display: inline-block;
   background: crimson;
   color: white;
@@ -195,15 +198,22 @@ section {
   border: 2px solid crimson;
   transition: all 0.3s ease;
 }
-.about .about-content .right a:hover{
+.about .about-content .right a:hover {
   color: crimson;
   background: none;
 }
-
-
-
-
-
+/* service section styling */
+.services {
+  color: white;
+  background: black;
+}
+.services .title::before {
+  background: white;
+}
+.services .title::after {
+  background: black;
+  content: "what i provide";
+}
 
 /*responsive media query starts*/
 @media (max-width: 1300px) {
@@ -212,11 +222,10 @@ section {
   }
 }
 @media (max-width: 1104px) {
-   .about .about-content .left img{
+  .about .about-content .left img {
     height: 350px;
     width: 350px;
-   }
- 
+  }
 }
 @media (max-width: 991px) {
   .max-width {
@@ -269,21 +278,18 @@ section {
   .max-width {
     max-width: 800px;
   }
-  .about .about-content .column{
+  .about .about-content .column {
     width: 100%;
   }
-  .about .about-content .left{
+  .about .about-content .left {
     display: flex;
     justify-content: center;
     margin: 0 auto 60px;
   }
-  .about .about-content .right{
+  .about .about-content .right {
     flex: 100%;
   }
-  
-  
 
-  
   @media (max-width: 690px) {
     .max-width {
       padding: 0 23px;
