@@ -440,18 +440,18 @@ section .title::after {
   width: 100%;
   margin-bottom: 15px;
 }
-.contact .right form .textarea{
+.contact .right form .textarea {
   height: 80px;
   width: 100%;
 }
-.contact .right form .name{
+.contact .right form .name {
   margin-right: 10px;
 }
-.contact .right form .email{
+.contact .right form .email {
   margin-left: 10px;
 }
 .contact .right form .field input,
-.contact .right form .textarea textarea{
+.contact .right form .textarea textarea {
   height: 100%;
   width: 100%;
   border: 1px solid lightgrey;
@@ -459,17 +459,17 @@ section .title::after {
   outline: none;
   padding: 0 15px;
   font-size: 17px;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
-.contact .right form .textarea textarea{
+.contact .right form .textarea textarea {
   padding-top: 10px;
   resize: none;
 }
-.contact .right form .button{
+.contact .right form .button {
   height: 47px;
   width: 170%;
 }
-.contact .right form .button button{
+.contact .right form .button button {
   width: 25%;
   height: 70%;
   border: 2px solid crimson;
@@ -481,7 +481,7 @@ section .title::after {
   cursor: pointer;
   transition: all 0.3s ease;
 }
-.contact .right form .button button:hover{
+.contact .right form .button button:hover {
   color: crimson;
   background: none;
 }
@@ -489,7 +489,7 @@ section .title::after {
 /*responsive media query starts*/
 @media (max-width: 1300px) {
   .home .max-width {
-    margin-left: 0px;
+    margin-left: 10px;
   }
 }
 @media (max-width: 1104px) {
@@ -566,7 +566,7 @@ section .title::after {
     margin-bottom: 20px;
   }
   .skills .skills-content .column,
-  .contact .contact-content .column{
+  .contact .contact-content .column {
     width: 100%;
     margin-bottom: 35px;
   }
