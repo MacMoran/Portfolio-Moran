@@ -63,14 +63,14 @@
 
 /* menu btn styling*/
 .menu-btn {
-  color: white;
+  color: black;
   font-size: 23px;
   cursor: pointer;
   display: none;
 }
-.menu-btn .btn {
+.menu-btn {
   background-color: crimson;
-  border-radius: 50px;
+  border-radius: 55px;
 }
 
 /*home section styling*/
@@ -124,7 +124,7 @@ section {
 }
 .about,
 .services,
-.skills,
+.portfolio,
 .teams,
 .contact,
 footer {
@@ -132,7 +132,7 @@ footer {
 }
 .about .about-content,
 .services .serv-content,
-.skills .skills-content,
+.portfolio .portfolio-content,
 .contact .contact-content {
   display: flex;
   flex-wrap: wrap;
@@ -259,22 +259,22 @@ section .title::after {
   margin: 10px 0 7px 0;
 }
 
-/* skills section styling */
-.skills .title::after {
+/* portfolio section styling */
+.portfolio .title::after {
   content: "what i know";
 }
-.skills .skills-content .column {
+.portfolio .portfolio-content .column {
   width: calc(50% - 30px);
 }
-.skills .skills-content .left .text {
+.portfolio .portfolio-content .left .text {
   font-size: 20px;
   font-weight: 600;
   margin-bottom: 10px;
 }
-.skills .skills-content .left .text p {
+.portfolio .portfolio-content .left .text p {
   text-align: justify;
 }
-.skills .skills-content .left a {
+.portfolio .portfolio-content .left a {
   display: inline-block;
   background: crimson;
   color: white;
@@ -286,31 +286,31 @@ section .title::after {
   border: 2px solid crimson;
   transition: all 0.3s ease;
 }
-.skills .skills-content .left a:hover {
+.portfolio .portfolio-content .left a:hover {
   color: crimson;
   background: none;
 }
 
-.skills .skills-content .right .bars {
+.portfolio .portfolio-content .right .bars {
   margin-bottom: 15px;
 }
-.skills .skills-content .right .info {
+.portfolio .portfolio-content .right .info {
   display: flex;
   margin-bottom: 5px;
   align-items: center;
   justify-content: space-between;
 }
-.skills .skills-content .right span {
+.portfolio .portfolio-content .right span {
   font-weight: 500;
   font-size: 18px;
 }
-.skills .skills-content .right .line {
+.portfolio .portfolio-content .right .line {
   height: 5px;
   width: 100%;
   background: grey;
   position: relative;
 }
-.skills .skills-content .right .line::before {
+.portfolio .portfolio-content .right .line::before {
   content: "";
   position: absolute;
   height: 100%;
@@ -318,19 +318,19 @@ section .title::after {
   top: 0;
   background: crimson;
 }
-.skills-content .right .html::before {
+.portfolio-content .right .html::before {
   width: 90%;
 }
-.skills-content .right .css::before {
+.portfolio-content .right .css::before {
   width: 60%;
 }
-.skills-content .right .js::before {
+.portfolio-content .right .js::before {
   width: 80%;
 }
-.skills-content .right .php::before {
+.portfolio-content .right .php::before {
   width: 50%;
 }
-.skills-content .right .mysql::before {
+.portfolio-content .right .mysql::before {
   width: 70%;
 }
 
@@ -579,7 +579,7 @@ footer span a:hover {
     width: calc(-50% - 10px);
     margin-bottom: 20px;
   }
-  .skills .skills-content .column,
+  .portfolio .portfolio-content .column,
   .contact .contact-content .column {
     width: 100%;
     margin-bottom: 35px;
