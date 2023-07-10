@@ -5,6 +5,9 @@
   box-sizing: border-box;
   text-decoration: none;
 }
+html {
+  scroll-behavior: smooth;
+}
 
 .max-width {
   max-width: 1300px;
@@ -29,6 +32,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  min-width: 100%;
 }
 .navbar .logo a {
   color: white;
@@ -63,14 +67,28 @@
 
 /* menu btn styling*/
 .menu-btn {
-  color: black;
+  color: white;
   font-size: 23px;
   cursor: pointer;
   display: none;
 }
-.menu-btn {
-  background-color: crimson;
-  border-radius: 55px;
+.scroll-up-btn {
+  position: fixed;
+  height: 45px;
+  width: 42px;
+  color: crimson;
+  background: blue;
+  right: 30px;
+  bottom: 30px;
+  text-align: center;
+  line-height: 45px;
+  color: #fff;
+  z-index: 999;
+  font-size: 30px;
+  border-radius: 6px;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
 }
 
 /*home section styling*/
@@ -82,6 +100,7 @@
   color: white; /* txt name mark john*/
   min-height: 500px;
   font-family: "Ubuntu", sans-serif;
+  width: 100%;
 }
 
 .home .max-width {
@@ -522,7 +541,7 @@ footer span a:hover {
     padding: 0 50px;
   }
   .menu-btn {
-    display: block;
+    display: flex;
     z-index: 999;
   }
   .menu-btn i.active:before {
