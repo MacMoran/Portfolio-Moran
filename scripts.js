@@ -12,6 +12,18 @@ $(document).ready(function () {
     }
   });
 
+  // toggle menu/navbar script
+$('.menu-mac').click(function() {
+  $('.navbar').toggleClass('active');
+  $('.menu-mac i').toggleClass('active');
+});
+
+// toggle dark mode
+$('.makeb').click(function() {
+  $('body').toggleClass('dark-theme');
+});
+
+
   // slide-up script
   $('.scroll-up-btn').click(function(){
     $('html').animate({scrollTop: 0});
