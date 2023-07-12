@@ -8,7 +8,8 @@
 html {
   scroll-behavior: smooth;
 }
-html, body{
+html,
+body {
   margin: 0px;
   padding: 0px;
   overflow-x: hidden;
@@ -79,7 +80,7 @@ html, body{
   cursor: pointer;
   display: none;
 }
-.scroll-up-btn{
+.scroll-up-btn {
   position: fixed;
   height: 45px;
   width: 42px;
@@ -96,7 +97,7 @@ html, body{
   pointer-events: none;
   transition: all 0.3s ease;
 }
-.scroll-up-btn.show{
+.scroll-up-btn.show {
   bottom: 30px;
   opacity: 1;
   pointer-events: auto;
@@ -551,6 +552,8 @@ footer span a:hover {
 @media (max-width: 947px) {
   .max-width {
     padding: 0 50px;
+  }
+  .fcon {
   }
   .menu-btn {
     display: flex;
