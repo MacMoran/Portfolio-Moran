@@ -5,20 +5,30 @@
   box-sizing: border-box;
   text-decoration: none;
 }
+section {
+  border-top: 2px solid var(--secondary-color); /* Add this line to create a solid line */
+  padding: 100px 0;
+}
+
+/* Remove the border-top from the first section (home section) */
+.home {
+  border-top: none;
+}
+
 html {
   scroll-behavior: smooth;
 }
-:root{
+:root {
   --primary-color: black; /*black*/
   --secondary-color: lightslategray; /*eto yung updated*/
   --tertiary-color: crimson;
-  --quaternary-color: #E7DFC6;
+  --quaternary-color: #e7dfc6;
 }
-.dark-theme{
+.dark-theme {
   --primary-color: white; /*crimson*/
-  --secondary-color: #D78A76; /*white*/
-  --tertiary-color: #F3CA40;
-  --quaternary-color: #131B23;
+  --secondary-color: #d78a76; /*white*/
+  --tertiary-color: #f3ca40;
+  --quaternary-color: #131b23;
 }
 html,
 body {
@@ -33,7 +43,6 @@ body {
   margin: auto;
 }
 
-
 /* navbar styling*/
 
 .navbar {
@@ -46,7 +55,7 @@ body {
 }
 .navbar.sticky {
   padding: 15px 0;
-  background: #2E4756; /*header color*/
+  background: #2e4756; /*header color*/
 }
 .navbar .max-width {
   display: flex;
@@ -60,11 +69,11 @@ body {
   font-weight: 600;
 }
 .navbar .logo a span {
-  color: var(--secondary-color);   /*logo span color*/
+  color: var(--secondary-color); /*logo span color*/
   transition: all 0.3s ease;
 }
 .navbar.sticky .logo a span {
-  color: var(--tertiary-color);     /*logo span color*/
+  color: var(--tertiary-color); /*logo span color*/
 }
 .navbar .menu li {
   list-style: none;
@@ -72,29 +81,29 @@ body {
 }
 .navbar .menu li a {
   display: block;
-  color: var(--primary-color);      /* txt header color*/
+  color: var(--primary-color); /* txt header color*/
   font-size: 18px;
   font-weight: 500;
   margin-left: 25px;
   transition: color 0.3s ease;
 }
 .navbar .menu i {
-  color: var(--secondary-color);   /*icon header color*/
+  color: var(--secondary-color); /*icon header color*/
   margin: 5px;
 }
 .navbar .menu li a:hover {
-  color: var(--tertiary-color);                /*hover txt color*/
+  color: var(--tertiary-color); /*hover txt color*/
 }
 
 /* menu btn styling*/
 .menu-btn {
-  color: var(--secondary-color);           /*menu btn color*/
+  color: var(--secondary-color); /*menu btn color*/
   font-size: 23px;
   cursor: pointer;
   display: none;
   text-align: right;
 }
-.bett .menu-btn{
+.bett .menu-btn {
   flex: 1;
   text-align: right;
   margin-left: 180px;
@@ -103,12 +112,12 @@ body {
   position: fixed;
   height: 45px;
   width: 42px;
-  background: var(--secondary-color);         /*btn up color*/
+  background: var(--secondary-color); /*btn up color*/
   right: 30px;
   bottom: 10px;
   text-align: center;
   line-height: 45px;
-  color: var(--tertiary-color);                   /*txt btn up color*/
+  color: var(--tertiary-color); /*txt btn up color*/
   z-index: 9999;
   font-size: 30px;
   border-radius: 6px;
@@ -126,12 +135,12 @@ body {
   opacity: 1;
   pointer-events: auto;
 }
-.makeb{
+.makeb {
   width: 30px;
   cursor: pointer;
-  color: var(--secondary-color);         /*darkmode btn color*/
+  color: var(--secondary-color); /*darkmode btn color*/
 }
-.navbar .menu{
+.navbar .menu {
   flex: 1;
   text-align: right;
   margin-right: 20px;
@@ -140,15 +149,26 @@ body {
 /*home section styling*/
 .home {
   display: flex;
-  background-color: var(--quaternary-color);          /*background btn color*/
-  /* background: url(images/gg-removebg-preview.png) no-repeat right;
-  border-radius: 10px;
-  background-size: 25%; */
+  background-color: var(--quaternary-color); /*background btn color*/
+  /* background: url(images/gg-removebg-preview.png) no-repeat right; */
+  /* border-radius: 25%;
+  background-size: 30%; */
   height: 95vh;
-  color: var(--primary-color); /* txt name mark john*/ 
+  color: var(--primary-color); /* txt name mark john*/
   min-height: 500px;
   font-family: "Ubuntu", sans-serif;
   width: 100%;
+}
+.home .home-content .left img {
+  position: absolute;
+  margin-top: 8%;
+  margin-right: 10%;
+  top: 0;
+  right: 0;
+  height: 450px;
+  width: 350px;
+  object-fit: cover;
+  border-radius: 30%;
 }
 
 .home .max-width {
@@ -167,22 +187,22 @@ body {
   margin: 5px 0;
 }
 .home .home-content .text-3 span {
-  color: var(--secondary-color);        /*txt btn color*/
+  color: var(--secondary-color); /*txt btn color*/
   font-weight: 500;
 }
 .home .home-content a {
   display: inline-block;
-  background: var(--secondary-color);       /*hire me btn color*/
-  color: var(--primary-color);              /*txt hire me color*/
+  background: var(--secondary-color); /*hire me btn color*/
+  color: var(--primary-color); /*txt hire me color*/
   font-size: 25px;
   padding: 12px 36px;
   margin: 4px;
   border-radius: 6px;
-  border: 2px solid ;          
+  border: 2px solid;
   transition: all 0.3s ease;
 }
 .home .home-content a:hover {
-  color: var(--tertiary-color);          /*hire me btn color*/
+  color: var(--tertiary-color); /*hire me btn color*/
   background: none;
 }
 /* all similiar content styling code */
@@ -222,7 +242,7 @@ section .title::before {
   left: 50%;
   width: 180px;
   height: 3px;
-  background: var(--primary-color);                      /*underline btn color*/
+  background: var(--primary-color); /*underline btn color*/
   transform: translateX(-50%);
 }
 section .title::after {
@@ -230,18 +250,18 @@ section .title::after {
   bottom: -12px;
   left: 50%;
   font-size: 20px;
-  color: var(--primary-color);                       /*menu btn color*/
+  color: var(--primary-color); /*menu btn color*/
   padding: 5px;
-  background: var(--quaternary-color);              /*menu btn color*/
+  background: var(--quaternary-color); /*menu btn color*/
   transform: translateX(-50%);
 }
 
 /*about section styling*/
-.about .title{
+.about .title {
   color: var(--primary-color);
 }
-.about{
-  background-color: var(--quaternary-color);       /*bg color*/
+.about {
+  background-color: var(--quaternary-color); /*bg color*/
 }
 .about .title::after {
   content: "who i am";
@@ -265,7 +285,7 @@ section .title::after {
   color: var(--primary-color);
 }
 .about .about-content .right .text span {
-  color: var(--secondary-color);                /*txt span color*/
+  color: var(--secondary-color); /*txt span color*/
 }
 .about .about-content .right p {
   text-align: justify;
@@ -273,42 +293,42 @@ section .title::after {
 }
 .about .about-content .right a {
   display: inline-block;
-  background: var(--secondary-color);              /*abt btn color*/
-  color: var(--primary-color);                  /*abt txt btn color*/
+  background: var(--secondary-color); /*abt btn color*/
+  color: var(--primary-color); /*abt txt btn color*/
   font-size: 20px;
   font-weight: 500;
   padding: 10px 30px;
   margin: 20px;
   border-radius: 6px;
-  border: 2px solid;          /*abt btn color*/
+  border: 2px solid; /*abt btn color*/
   transition: all 0.3s ease;
 }
 .about .about-content .right a:hover {
-  color: var(--tertiary-color);                    /*menu btn color*/
+  color: var(--tertiary-color); /*menu btn color*/
   background: none;
 }
 
 /* service section styling */
-.portfolio .title{
+.portfolio .title {
   color: var(--primary-color);
 }
 .services,
 .teams {
-  color: var(--primary-color);                       /*txt color*/
-  background: var(--quaternary-color);                /*bg color*/
+  color: var(--primary-color); /*txt color*/
+  background: var(--quaternary-color); /*bg color*/
 }
 .services .title::before,
 .teams .title::before {
-  background: var(--primary-color);                  /*line udner my ser color*/
+  background: var(--primary-color); /*line udner my ser color*/
 }
 .services .title::after,
 .teams .title::after {
-  background: var(--quaternary-color);                /*bg txt underline color*/
+  background: var(--quaternary-color); /*bg txt underline color*/
   content: "what i provide";
 }
 .services .serv-content .card {
   width: calc(33% - 20px);
-  background: var(--secondary-color);         /*3 box bg color*/
+  background: var(--secondary-color); /*3 box bg color*/
   text-align: center;
   border-radius: 6px;
   padding: 20px 25px;
@@ -317,7 +337,9 @@ section .title::after {
   padding: 10px;
 }
 .services .serv-content .card:hover {
-  background: var(--tertiary-color);              /*3 box hover bg color*/ /*pwede kahit dna isama sa dm*/
+  background: var(
+    --tertiary-color
+  ); /*3 box hover bg color*/ /*pwede kahit dna isama sa dm*/
 }
 .services .serv-content .card .box {
   transition: all 0.3s ease;
@@ -327,11 +349,11 @@ section .title::after {
 }
 .services .serv-content .card i {
   font: 50px;
-  color: var(--primary-color);                              /*menu btn color*/
+  color: var(--primary-color); /*menu btn color*/
   transition: color 0.3s ease;
 }
 .services .serv-content .card:hover i {
-  color: var(--secondary-color);                     /*menu btn color*/
+  color: var(--secondary-color); /*menu btn color*/
 }
 .services .serv-content .card .text {
   font-size: 25px;
@@ -340,15 +362,15 @@ section .title::after {
 }
 
 /* portfolio section styling */
-.portfolio{
-  background-color: var(--quaternary-color);                 /*background color8*/
+.portfolio {
+  background-color: var(--quaternary-color); /*background color8*/
 }
 .portfolio .title::after {
   content: "what i know";
 }
 .portfolio .portfolio-content .column {
-  width: calc(50% - 30px);  
-  color: var(--primary-color);               
+  width: calc(50% - 30px);
+  color: var(--primary-color);
 }
 .portfolio .portfolio-content .left .text {
   font-size: 20px;
@@ -361,18 +383,18 @@ section .title::after {
 }
 .portfolio .portfolio-content .left a {
   display: inline-block;
-  background: var(--secondary-color);                      /*readmore btn color*/
-  color: var(--primary-color);                                   /*readmore txt btn color*/
-  font-size: 18px; 
+  background: var(--secondary-color); /*readmore btn color*/
+  color: var(--primary-color); /*readmore txt btn color*/
+  font-size: 18px;
   font-weight: 500;
   padding: 8px 16px;
   margin: 20px;
   border-radius: 6px;
-  border: 2px solid;                            
+  border: 2px solid;
   transition: all 0.3s ease;
 }
 .portfolio .portfolio-content .left a:hover {
-  color: var(--tertiary-color);                                 /*readmore hover btn color*/
+  color: var(--tertiary-color); /*readmore hover btn color*/
   background: none;
 }
 
@@ -392,7 +414,7 @@ section .title::after {
 .portfolio .portfolio-content .right .line {
   height: 5px;
   width: 100%;
-  background: var(--quaternary-color);                          /*line % color*/
+  background: var(--quaternary-color); /*line % color*/
   position: relative;
 }
 .portfolio .portfolio-content .right .line::before {
@@ -401,7 +423,7 @@ section .title::after {
   height: 100%;
   left: 0;
   top: 0;
-  background: var(--secondary-color);               /*line  color*/
+  background: var(--secondary-color); /*line  color*/
 }
 .portfolio-content .right .html::before {
   width: 90%;
@@ -420,24 +442,24 @@ section .title::after {
 }
 
 /* team section styling */
-.teams .title{
+.teams .title {
   color: var(--primary-color);
 }
-.teams{
+.teams {
   background-color: var(--quaternary-color);
 }
 .teams .title::after {
   content: "who with me";
 }
 .teams .carousel .card {
-  background: var(--secondary-color);                       /*box colorcolor*/
+  background: var(--secondary-color); /*box colorcolor*/
   border-radius: 10%;
   padding: 25px 35px;
   text-align: center;
   transition: all 0.3s ease;
 }
 .teams .carousel .card:hover {
-  background: var(--tertiary-color);                              /*box hover color*/
+  background: var(--tertiary-color); /*box hover color*/
 }
 .teams .carousel .card .box {
   display: flex;
@@ -459,11 +481,11 @@ section .title::after {
   width: 150px;
   object-fit: cover;
   border-radius: 50%;
-  border: 5px solid var(--tertiary-color);               /*radius color*/
+  border: 5px solid var(--tertiary-color); /*radius color*/
   transition: all 0.3s ease;
 }
 .teams .carousel .card:hover img {
-  border-color: var(--primary-color);                     /*hover radius color*/
+  border-color: var(--primary-color); /*hover radius color*/
 }
 .owl-dots {
   text-align: center;
@@ -475,7 +497,7 @@ section .title::after {
   margin: 0 5px;
   outline: none !important;
   border-radius: 50%;
-  border: 2px solid var(--primary-color) !important;              /*3 line dot btn color*/
+  border: 2px solid var(--primary-color) !important; /*3 line dot btn color*/
   transition: all 0.3s ease;
 }
 .owl-dot.active {
@@ -484,16 +506,16 @@ section .title::after {
 }
 .owl-dot.active,
 .owl-dot:hover {
-  background: var(--secondary-color) !important;                  /*3 line dot btn color*/
+  background: var(--secondary-color) !important; /*3 line dot btn color*/
 }
 
 /* contact section styling */
 
-.contact .title{
+.contact .title {
   color: var(--primary-color);
 }
-.contact{
-  background-color: var(--quaternary-color);                      /*bg color*/
+.contact {
+  background-color: var(--quaternary-color); /*bg color*/
 }
 .contact .title::after {
   content: "get in touch";
@@ -523,14 +545,14 @@ section .title::after {
 }
 .contact .contact-content .row i {
   font-size: 25px;
-  color: var(--secondary-color);                            /* icon color*/
+  color: var(--secondary-color); /* icon color*/
 }
 .contact .contact-content .info .head {
   font-weight: 500;
 }
 .contact .contact-content .info .sub-title {
-  color: var(--primary-color);                                          /*txt color*/
-} 
+  color: var(--primary-color); /*txt color*/
+}
 .contact .right form .fields {
   display: flex;
 }
@@ -554,7 +576,7 @@ section .title::after {
 .contact .right form .textarea textarea {
   height: 100%;
   width: 100%;
-  border: 1px solid var(--primary-color);                            /*border box msg color*/
+  border: 1px solid var(--primary-color); /*border box msg color*/
   border-radius: 6px;
   outline: none;
   padding: 0 15px;
@@ -572,9 +594,9 @@ section .title::after {
 .contact .right form .button button {
   width: 25%;
   height: 70%;
-  border: 2px solid;               
-  background: var(--secondary-color);                     /*send M btn bg color*/
-  color: var(--primary-color);                                  /*send M txt btn color*/
+  border: 2px solid;
+  background: var(--secondary-color); /*send M btn bg color*/
+  color: var(--primary-color); /*send M txt btn color*/
   font-size: 15px;
   font-weight: 500;
   border-radius: 6px;
@@ -582,17 +604,17 @@ section .title::after {
   transition: all 0.3s ease;
 }
 .contact .right form .button button:hover {
-  color: var(--tertiary-color);                                /*hover send M txt btn color*/
+  color: var(--tertiary-color); /*hover send M txt btn color*/
   background: none;
 }
 /* footer section styling */
 footer {
-  background: #2E4756;
+  background: #2e4756;
   padding: 20px 23px;
-  color: var(--primary-color);                    /*txt color*/
+  color: var(--primary-color); /*txt color*/
 }
 footer span a {
-  color: var(--tertiary-color);                       /*txt color*/
+  color: var(--tertiary-color); /*txt color*/
   text-decoration: none;
 }
 footer span a:hover {
@@ -621,7 +643,7 @@ footer span a:hover {
   .max-width {
     padding: 0 50px;
   }
-  .menu-btn{
+  .menu-btn {
     display: flex;
     z-index: 999;
   }
@@ -634,7 +656,7 @@ footer span a:hover {
     width: 100%;
     left: -100%;
     top: 0;
-    background: var(--primary-color);                      /*menu btn color*/
+    background: var(--primary-color); /*menu btn color*/
     text-align: center;
     padding-top: 80px;
     transition: all 0.3s ease;
