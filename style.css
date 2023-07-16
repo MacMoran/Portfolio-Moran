@@ -5,15 +5,7 @@
   box-sizing: border-box;
   text-decoration: none;
 }
-section {
-  border-top: 2px solid var(--secondary-color); /* Add this line to create a solid line */
-  padding: 100px 0;
-}
 
-/* Remove the border-top from the first section (home section) */
-.home {
-  border-top: none;
-}
 
 html {
   scroll-behavior: smooth;
@@ -64,8 +56,9 @@ body {
   min-width: 100%;
 }
 .navbar .logo a {
+  margin-left: 150%;
   color: var(--primary-color); /*logo color*/
-  font-size: 35px;
+  font-size: 40px;
   font-weight: 600;
 }
 .navbar .logo a span {
@@ -82,8 +75,8 @@ body {
 .navbar .menu li a {
   display: block;
   color: var(--primary-color); /* txt header color*/
-  font-size: 18px;
-  font-weight: 500;
+  font-size: 20px;
+  font-weight: 600;
   margin-left: 25px;
   transition: color 0.3s ease;
 }
@@ -101,12 +94,11 @@ body {
   font-size: 23px;
   cursor: pointer;
   display: none;
-  text-align: right;
 }
 .bett .menu-btn {
   flex: 1;
   text-align: right;
-  margin-left: 180px;
+  margin-left: 150px;
 }
 .scroll-up-btn {
   position: fixed;
@@ -147,43 +139,51 @@ body {
 }
 
 /*home section styling*/
+#particles-js {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 .home {
   display: flex;
-  background-color: var(--quaternary-color); /*background btn color*/
-  /* background: url(images/gg-removebg-preview.png) no-repeat right; */
-  /* border-radius: 25%;
-  background-size: 30%; */
+  background-color: var(--quaternary-color); 
   height: 95vh;
   color: var(--primary-color); /* txt name mark john*/
   min-height: 500px;
   font-family: "Ubuntu", sans-serif;
   width: 100%;
+  border-top: none;
 }
+
 .home .home-content .left img {
   position: absolute;
-  margin-top: 8%;
-  margin-right: 10%;
+  margin-top: 15%;
+  margin-right: 15%;
   top: 0;
   right: 0;
-  height: 450px;
-  width: 350px;
+  height: 500px;
+  width: 500px;
   object-fit: cover;
   border-radius: 30%;
+  border: 6px solid var(--secondary-color);
 }
 
 .home .max-width {
-  margin: auto 0 auto 40px;
+  margin: auto 0 auto 250px;
 }
 .home .home-content .text-1 {
-  font-size: 27px;
+  font-size: 35px;
 }
 .home .home-content .text-2 {
-  font-size: 75px;
+  font-size: 90px;
   font-weight: 600;
   margin-left: -3px;
 }
 .home .home-content .text-3 {
-  font-size: 40px;
+  font-size: 50px;
   margin: 5px 0;
 }
 .home .home-content .text-3 span {
@@ -191,6 +191,7 @@ body {
   font-weight: 500;
 }
 .home .home-content a {
+  position: absolute;
   display: inline-block;
   background: var(--secondary-color); /*hire me btn color*/
   color: var(--primary-color); /*txt hire me color*/
@@ -258,22 +259,26 @@ section .title::after {
 
 /*about section styling*/
 .about .title {
+  font-weight: 600;
   color: var(--primary-color);
 }
 .about {
   background-color: var(--quaternary-color); /*bg color*/
 }
 .about .title::after {
-  content: "who i am";
+  font-size: 60%;
+  content: "Who am I?";
 }
 .about .about-content .left {
   width: 45%;
 }
 .about .about-content .left img {
+  position: relative;
   height: 350px;
   width: 350px;
   object-fit: cover;
-  border-radius: 50px;
+  border-radius: 60px;
+  border: 6px solid var(--secondary-color);
 }
 .about .about-content .right {
   width: 55%;
@@ -292,6 +297,7 @@ section .title::after {
   color: var(--primary-color);
 }
 .about .about-content .right a {
+  position: absolute;
   display: inline-block;
   background: var(--secondary-color); /*abt btn color*/
   color: var(--primary-color); /*abt txt btn color*/
@@ -309,8 +315,8 @@ section .title::after {
 }
 
 /* service section styling */
-.portfolio .title {
-  color: var(--primary-color);
+.services .title{
+  font-weight: 600;
 }
 .services,
 .teams {
@@ -323,14 +329,17 @@ section .title::after {
 }
 .services .title::after,
 .teams .title::after {
+  font-size: 50%;
   background: var(--quaternary-color); /*bg txt underline color*/
-  content: "what i provide";
+  content: "Skills";
 }
 .services .serv-content .card {
+  position: relative;
   width: calc(33% - 20px);
   background: var(--secondary-color); /*3 box bg color*/
   text-align: center;
-  border-radius: 6px;
+  border-radius: 20px;
+  border:solid var(--secondary-color);
   padding: 20px 25px;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -362,6 +371,10 @@ section .title::after {
 }
 
 /* portfolio section styling */
+.portfolio .title {
+  font-weight: 600;
+  color: var(--primary-color);
+}
 .portfolio {
   background-color: var(--quaternary-color); /*background color8*/
 }
@@ -373,20 +386,23 @@ section .title::after {
   color: var(--primary-color);
 }
 .portfolio .portfolio-content .left .text {
+  margin-left: 3%;
   font-size: 20px;
-  font-weight: 600;
+  font-weight: 500;
   margin-bottom: 10px;
   color: var(--primary-color);
 }
-.portfolio .portfolio-content .left .text p {
+.portfolio .portfolio-content .left p {
   text-align: justify;
+  margin-left: 28px;
 }
 .portfolio .portfolio-content .left a {
+  position: relative;
   display: inline-block;
   background: var(--secondary-color); /*readmore btn color*/
   color: var(--primary-color); /*readmore txt btn color*/
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 600;
   padding: 8px 16px;
   margin: 20px;
   border-radius: 6px;
@@ -400,6 +416,8 @@ section .title::after {
 
 .portfolio .portfolio-content .right .bars {
   margin-bottom: 15px;
+  margin-left: 20px;
+  margin-right: 40px;
 }
 .portfolio .portfolio-content .right .info {
   display: flex;
@@ -443,6 +461,7 @@ section .title::after {
 
 /* team section styling */
 .teams .title {
+  font-weight: 600;
   color: var(--primary-color);
 }
 .teams {
@@ -453,8 +472,12 @@ section .title::after {
 }
 .teams .carousel .card {
   background: var(--secondary-color); /*box colorcolor*/
+  border: 5px solid var(--tertiary-color);
   border-radius: 10%;
-  padding: 25px 35px;
+  margin-left: 7%;
+  height: 400px;
+  width: 500px;
+  padding: 30px 40px;
   text-align: center;
   transition: all 0.3s ease;
 }
@@ -472,7 +495,7 @@ section .title::after {
   transform: scale(1.05);
 }
 .teams .carousel .card .text {
-  font-size: 25px;
+  font-size: 20px;
   font-weight: 500;
   margin: 10px 0 7px 0;
 }
@@ -592,6 +615,8 @@ section .title::after {
   width: 170%;
 }
 .contact .right form .button button {
+  position: relative;
+  display: inline-block;
   width: 25%;
   height: 70%;
   border: 2px solid;
@@ -607,6 +632,7 @@ section .title::after {
   color: var(--tertiary-color); /*hover send M txt btn color*/
   background: none;
 }
+
 /* footer section styling */
 footer {
   background: #2e4756;
@@ -621,6 +647,7 @@ footer span a:hover {
   text-decoration: underline;
   color: aqua;
 }
+
 
 /*responsive media query starts*/
 @media (max-width: 1300px) {
@@ -639,16 +666,72 @@ footer span a:hover {
     padding: 0 50px;
   }
 }
+@media screen and (max-width: 768px) {
+  .teams .carousel .card {
+    padding: 15px 20px;
+  }
+  .teams .carousel .card {
+    border: 5px solid var(--tertiary-color);
+    border-radius: 10%;
+    height: 400px;
+    width: 130px;
+    padding: 25px 35px;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+  
+  .teams .carousel .card img {
+    height: 100px;
+    width: 100px;
+  }
+  
+  .teams .carousel .card .text {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .about .title::after {
+    font-size: 16px; /* Adjusted font size for responsiveness */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .services .title::after,
+.teams .title::after {
+    font-size: 16px; /* Adjusted font size for responsiveness */
+  }
+}
+@media screen and (max-width: 768px) {
+  .portfolio .title::after{
+    font-size: 16px; /* Adjusted font size for responsiveness */
+  }
+}
+
 @media (max-width: 947px) {
   .max-width {
     padding: 0 50px;
   }
+  .home .home-content .left img {
+    display: none;
+  }
   .menu-btn {
     display: flex;
     z-index: 999;
+    
   }
+  /* .bett .menu-btn {
+    display: flex;
+    margin-left: 535px;
+    margin-top: -1px;
+  } */
   .menu-btn i.active:before {
     content: "\f00d";
+  }
+  .navbar .max-width .bett .menu-btn i{
+    position: relative;
+    margin-left: 400%;
+    margin-right: 250%;
+    margin-top: -3px;
   }
   .navbar .menu {
     position: fixed;
@@ -656,7 +739,7 @@ footer span a:hover {
     width: 100%;
     left: -100%;
     top: 0;
-    background: var(--primary-color); /*menu btn color*/
+    background: var(--quaternary-color); /*menu btn color*/
     text-align: center;
     padding-top: 80px;
     transition: all 0.3s ease;
@@ -671,6 +754,9 @@ footer span a:hover {
     display: inline-block;
     margin: 20px 0;
     font-size: 25px;
+  }
+  .navbar .max-width .logo{
+    margin-left: -165px;
   }
   .home .home-content .text-2 {
     font-size: 70px;
@@ -732,3 +818,8 @@ footer span a:hover {
     }
   }
 }
+
+
+
+
+
