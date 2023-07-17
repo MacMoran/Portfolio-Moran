@@ -6,7 +6,6 @@
   text-decoration: none;
 }
 
-
 html {
   scroll-behavior: smooth;
 }
@@ -56,7 +55,6 @@ body {
   min-width: 100%;
 }
 .navbar .logo a {
-  margin-left: 150%;
   color: var(--primary-color); /*logo color*/
   font-size: 40px;
   font-weight: 600;
@@ -75,9 +73,9 @@ body {
 .navbar .menu li a {
   display: block;
   color: var(--primary-color); /* txt header color*/
-  font-size: 20px;
-  font-weight: 600;
-  margin-left: 25px;
+  font-size: 15px;
+  font-weight: 500;
+  margin-left: 10px;
   transition: color 0.3s ease;
 }
 .navbar .menu i {
@@ -117,10 +115,6 @@ body {
   pointer-events: none;
   transition: all 0.3s ease;
 }
-/* .scroll-up-btn i:hover {
-  color: rgb(73, 20, 220);          hire me btn color
-  background: black;
-}*/
 
 .scroll-up-btn.show {
   bottom: 30px;
@@ -139,6 +133,50 @@ body {
 }
 
 /*home section styling*/
+
+.home .max-width .ftt i {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-top: 30%;
+  margin-left: 5px;
+  width: 30px;
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
+  border-radius: 30%;
+  border: 9px solid var(--secondary-color);
+  width: 50px;
+  height: 50px;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.soc {
+  display: flex;
+  flex-direction: row;
+  margin-top: 100px;
+}
+
+.links__social {
+  list-style: none;
+}
+
+.links__social2 {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  padding-left: 1px;
+}
+
+.home .max-width .ftt i:hover {
+  color: var(--secondary-color);
+  background-color: var(--primary-color);
+}
+
+.icons__bar {
+  position: absolute;
+  display: flex;
+}
+
 #particles-js {
   position: fixed;
   top: 0;
@@ -149,7 +187,7 @@ body {
 
 .home {
   display: flex;
-  background-color: var(--quaternary-color); 
+  background-color: var(--quaternary-color);
   height: 95vh;
   color: var(--primary-color); /* txt name mark john*/
   min-height: 500px;
@@ -164,8 +202,8 @@ body {
   margin-right: 15%;
   top: 0;
   right: 0;
-  height: 500px;
-  width: 500px;
+  height: 400px;
+  width: 400px;
   object-fit: cover;
   border-radius: 30%;
   border: 6px solid var(--secondary-color);
@@ -175,15 +213,16 @@ body {
   margin: auto 0 auto 250px;
 }
 .home .home-content .text-1 {
-  font-size: 35px;
+  margin-top: 30%;
+  font-size: 30px;
 }
 .home .home-content .text-2 {
   font-size: 90px;
-  font-weight: 600;
+  font-weight: 450;
   margin-left: -3px;
 }
 .home .home-content .text-3 {
-  font-size: 50px;
+  font-size: 30px;
   margin: 5px 0;
 }
 .home .home-content .text-3 span {
@@ -202,6 +241,20 @@ body {
   border: 2px solid;
   transition: all 0.3s ease;
 }
+
+.home .home-content li a {
+  position: relative; /* changed from absolute to relative */
+  display: inline-block;
+  background: var(--secondary-color); /*hire me btn color*/
+  color: var(--primary-color); /*txt hire me color*/
+  font-size: 25px;
+  padding: 5px 7px;
+  margin: 10px;
+  border-radius: 50%; /* changed from 50% to a higher value for more circular shape */
+  border: 3px solid var(--primary-color);
+  transition: all 0.3s ease;
+}
+
 .home .home-content a:hover {
   color: var(--tertiary-color); /*hire me btn color*/
   background: none;
@@ -274,6 +327,7 @@ section .title::after {
 }
 .about .about-content .left img {
   position: relative;
+  margin-top: 18%;
   height: 350px;
   width: 350px;
   object-fit: cover;
@@ -315,7 +369,7 @@ section .title::after {
 }
 
 /* service section styling */
-.services .title{
+.services .title {
   font-weight: 600;
 }
 .services,
@@ -339,7 +393,7 @@ section .title::after {
   background: var(--secondary-color); /*3 box bg color*/
   text-align: center;
   border-radius: 20px;
-  border:solid var(--secondary-color);
+  border: solid var(--secondary-color);
   padding: 20px 25px;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -379,7 +433,7 @@ section .title::after {
   background-color: var(--quaternary-color); /*background color8*/
 }
 .portfolio .title::after {
-  content: "what i know";
+  content: "Ratings";
 }
 .portfolio .portfolio-content .column {
   width: calc(50% - 30px);
@@ -444,19 +498,19 @@ section .title::after {
   background: var(--secondary-color); /*line  color*/
 }
 .portfolio-content .right .html::before {
-  width: 90%;
+  width: 60%;
 }
 .portfolio-content .right .css::before {
   width: 60%;
 }
 .portfolio-content .right .js::before {
-  width: 80%;
+  width: 50%;
 }
 .portfolio-content .right .php::before {
   width: 50%;
 }
 .portfolio-content .right .mysql::before {
-  width: 70%;
+  width: 50%;
 }
 
 /* team section styling */
@@ -648,7 +702,6 @@ footer span a:hover {
   color: aqua;
 }
 
-
 /*responsive media query starts*/
 @media (max-width: 1300px) {
   .home .max-width {
@@ -679,12 +732,12 @@ footer span a:hover {
     text-align: center;
     transition: all 0.3s ease;
   }
-  
+
   .teams .carousel .card img {
     height: 100px;
     width: 100px;
   }
-  
+
   .teams .carousel .card .text {
     font-size: 18px;
   }
@@ -697,12 +750,12 @@ footer span a:hover {
 
 @media screen and (max-width: 768px) {
   .services .title::after,
-.teams .title::after {
+  .teams .title::after {
     font-size: 16px; /* Adjusted font size for responsiveness */
   }
 }
 @media screen and (max-width: 768px) {
-  .portfolio .title::after{
+  .portfolio .title::after {
     font-size: 16px; /* Adjusted font size for responsiveness */
   }
 }
@@ -717,7 +770,6 @@ footer span a:hover {
   .menu-btn {
     display: flex;
     z-index: 999;
-    
   }
   /* .bett .menu-btn {
     display: flex;
@@ -727,7 +779,7 @@ footer span a:hover {
   .menu-btn i.active:before {
     content: "\f00d";
   }
-  .navbar .max-width .bett .menu-btn i{
+  .navbar .max-width .bett .menu-btn i {
     position: relative;
     margin-left: 400%;
     margin-right: 250%;
@@ -755,7 +807,7 @@ footer span a:hover {
     margin: 20px 0;
     font-size: 25px;
   }
-  .navbar .max-width .logo{
+  .navbar .max-width .logo {
     margin-left: -165px;
   }
   .home .home-content .text-2 {
@@ -818,8 +870,3 @@ footer span a:hover {
     }
   }
 }
-
-
-
-
-
