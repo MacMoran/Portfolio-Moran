@@ -216,11 +216,32 @@ body {
   margin-top: 30%;
   font-size: 30px;
 }
-.home .home-content .text-2 {
-  font-size: 90px;
-  font-weight: 450;
-  margin-left: -3px;
+@keyframes textDistort {
+  0% {
+    text-stroke: 0px;
+  }
+  50% {
+    text-stroke: 2px;
+    transform: translateX(-3px) rotate(-2deg);
+  }
+  100% {
+    text-stroke: 0px;
+    transform: translateX(0) rotate(0);
+  }
 }
+
+.text-2 .distorted-text {
+  display: inline-block;
+  font-size: 80px;
+  font-weight: bold;
+  -webkit-text-stroke: 3px var(--secondary-color);
+  -webkit-text-fill-color: var(--primary-color);
+  -webkit-animation: fill 0.5s infinite alternate;
+  animation: textDistort 1s infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+}
+
 .home .home-content .text-3 {
   font-size: 30px;
   margin: 5px 0;
@@ -781,9 +802,10 @@ footer span a:hover {
   }
   .navbar .max-width .bett .menu-btn i {
     position: relative;
-    margin-left: 400%;
-    margin-right: 250%;
-    margin-top: -3px;
+    margin-left: 10%;
+    margin-right: 100%;
+    margin-top: 0px;
+    font-size: 115%;
   }
   .navbar .menu {
     position: fixed;
@@ -808,7 +830,7 @@ footer span a:hover {
     font-size: 25px;
   }
   .navbar .max-width .logo {
-    margin-left: -165px;
+    margin-left: 10px;
   }
   .home .home-content .text-2 {
     font-size: 70px;
