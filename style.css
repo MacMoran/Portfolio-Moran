@@ -13,7 +13,7 @@ html {
   --primary-color: black; /*black*/
   --secondary-color: lightslategray; /*eto yung updated*/
   --tertiary-color: crimson;
-  --quaternary-color: #e7dfc6;
+  --quaternary-color: #E7DFC6;
 }
 .dark-theme {
   --primary-color: white; /*crimson*/
